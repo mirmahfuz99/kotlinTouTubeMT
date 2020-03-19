@@ -25,6 +25,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
+
+        <activity android:name=".CourseLessonActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseDetailsActivity"/>
+        </activity>
     </application>
 
 </manifest>
