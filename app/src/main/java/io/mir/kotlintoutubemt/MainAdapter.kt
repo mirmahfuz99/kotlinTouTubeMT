@@ -1,5 +1,6 @@
 package io.mir.kotlintoutubemt
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +42,12 @@ class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolde
 }
 
 class CustomViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-
+    init {
+        view.setOnClickListener {
+            println("TEST")
+            val intent = Intent(view.context, CourseDetailsActivity::class.java)
+            view.context.startActivity(intent)
+        }
+    }
 }
 //https://www.youtube.com/watch?v=CGZsfpst8pU&list=PLTlO09YjSC4Rk2BRz1AHQnwoqS92L1jIz&index=3
